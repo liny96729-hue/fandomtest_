@@ -328,7 +328,7 @@ else:
         <div class="card">
 
         <h1 style="text-align:center;">
-        🎉 테스트 완료!
+        🎉 나와 제일 잘 맞는 팬덤은?
         </h1>
 
 
