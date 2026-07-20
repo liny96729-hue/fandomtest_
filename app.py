@@ -41,22 +41,17 @@ st.markdown(
 
 
     .title {
-
         text-align:center;
         font-size:42px;
         font-weight:800;
-        color:#222222 !important;
-
     }
 
 
     .sub {
-
         text-align:center;
         font-size:18px;
         color:#777777 !important;
         margin-bottom:40px;
-
     }
 
 
@@ -68,6 +63,7 @@ st.markdown(
         box-shadow:0px 5px 20px rgba(0,0,0,0.08);
 
     }
+
 
 
     div[data-testid="stRadio"] {
@@ -94,14 +90,10 @@ st.markdown(
         width:100%;
         height:55px;
         border-radius:30px;
-
         background:white;
-
         color:#222222 !important;
-
         font-size:17px;
         font-weight:bold;
-
         border:1px solid #dddddd;
 
     }
@@ -111,7 +103,6 @@ st.markdown(
     div.stButton > button:hover {
 
         color:#ff5c8a !important;
-
         border:2px solid #ff5c8a;
 
     }
@@ -180,7 +171,6 @@ if "answers" not in st.session_state:
 
 
 # =====================
-# QUESTION# =====================
 # QUESTION
 # =====================
 
@@ -218,12 +208,10 @@ if st.session_state.page < len(questions):
     st.write("")
 
 
-
-    # 기존 questions.py 구조 (A/B)
     options = [
-    answer["text"]
-    for answer in q["answers"]
-]
+        answer["text"]
+        for answer in q["answers"]
+    ]
 
 
 
@@ -271,9 +259,7 @@ if st.session_state.page < len(questions):
         if st.button("다음 ➡️"):
 
 
-            if st.session_state.page < len(
-                st.session_state.answers
-            ):
+            if st.session_state.page < len(st.session_state.answers):
 
                 st.session_state.answers[
                     st.session_state.page
@@ -282,7 +268,6 @@ if st.session_state.page < len(questions):
             else:
 
                 st.session_state.answers.append(choice)
-
 
 
             st.session_state.page += 1
@@ -301,64 +286,56 @@ else:
     scores = {}
 
 
-for i, answer in enumerate(st.session_state.answers):
 
-    q = questions[i]
-
-    for option in q["answers"]:
-
-        if option["text"] == answer:
-
-            fandom = option["type"]
-
-            if fan
-
-scores = {}
+    for i, answer in enumerate(st.session_state.answers):
 
 
-for i, answer in enumerate(st.session_state.answers):
+        q = questions[i]
 
-    q = questions[i]
 
-    for option in q["answers"]:
+        for option in q["answers"]:
 
-        if option["text"] == answer:
 
-            fandom = option["type"]
+            if option["text"] == answer:
 
-            if fandom not in scores:
-                scores[fandom] = 0
 
-            scores[fandom] += 1
+                fandom = option["type"]
+
+
+                if fandom not in scores:
+
+                    scores[fandom] = 0
+
+
+                scores[fandom] += 1
 
 
 
-result_type = max(
-    scores,
-    key=scores.get
-)
 
-
-result = results[result_type]            
+    result_type = max(
+        scores,
+        key=scores.get
+    )
 
 
 
-st.markdown(
+    result = results[result_type]
+
+
+
+    st.markdown(
         f"""
         <div class="card">
 
-        <h1 style="
-        text-align:center;
-        ">
+        <h1 style="text-align:center;">
         🎉 테스트 완료!
         </h1>
 
 
-        <h1 style="
-        text-align:center;
-        ">
+        <h1 style="text-align:center;">
         {result["title"]}
         </h1>
+
 
         </div>
         """,
@@ -367,47 +344,48 @@ st.markdown(
 
 
 
-st.write("")
+    st.write("")
 
 
-st.subheader(
+
+    st.subheader(
         result["catchphrase"]
     )
 
 
-st.write(
+    st.write(
         result["description"]
     )
 
 
 
-st.divider()
+    st.divider()
 
 
 
-st.subheader("✨ 당신의 특징")
+    st.subheader("✨ 당신의 특징")
 
 
-for feature in result["features"]:
+    for feature in result["features"]:
 
         st.info(feature)
 
 
 
-st.divider()
+    st.divider()
 
 
 
-st.subheader("💡 추천 덕질 스타일")
+    st.subheader("💡 추천 덕질 스타일")
 
 
-st.success(
+    st.success(
         result["style"]
     )
 
 
 
-st.divider()
+    st.divider()
 
 
 
@@ -416,11 +394,11 @@ st.divider()
     # =====================
 
 
-col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = st.columns(3)
 
 
 
-with col1:
+    with col1:
 
         if st.button("🔄 다시 하기"):
 
@@ -432,7 +410,8 @@ with col1:
 
 
 
-with col2:
+    with col2:
+
 
         st.markdown(
             """
@@ -446,6 +425,7 @@ with col2:
             height:55px;
             border-radius:30px;
             background:white;
+            color:#222222;
             text-decoration:none;
             font-size:15px;
             font-weight:bold;
@@ -459,10 +439,11 @@ with col2:
 
 
 
-with col3:
+    with col3:
 
 
         TEST_URL = "https://fandomstgetest.streamlit.app/"
+
 
 
         share_text = (
@@ -471,6 +452,7 @@ with col3:
             f"너의 팬덤 유형도 찾아보기 ✨\n"
             f"{TEST_URL}"
         )
+
 
 
         share_url = (
@@ -492,6 +474,7 @@ with col3:
             height:55px;
             border-radius:30px;
             background:white;
+            color:#222222;
             text-decoration:none;
             font-size:15px;
             font-weight:bold;
