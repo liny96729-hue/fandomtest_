@@ -311,6 +311,21 @@ for i, answer in enumerate(st.session_state.answers):
 
             fandom = option["type"]
 
+            if fan
+
+scores = {}
+
+
+for i, answer in enumerate(st.session_state.answers):
+
+    q = questions[i]
+
+    for option in q["answers"]:
+
+        if option["text"] == answer:
+
+            fandom = option["type"]
+
             if fandom not in scores:
                 scores[fandom] = 0
 
@@ -324,7 +339,7 @@ result_type = max(
 )
 
 
-result = results[result_type]
+result = results[result_type]            
 
 
 
