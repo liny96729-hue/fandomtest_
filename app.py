@@ -324,45 +324,31 @@ else:
 
 
     st.markdown(
-        f"""
-        <div class="card">
+    f"""
+    <div class="card">
 
-        <h1 style="text-align:center;">
-        🎉 나와 제일 잘 맞는 팬덤은?
-        </h1>
-
-
-        <h1 style="text-align:center;">
-        {result["title"]}
-        </h1>
-
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    <h3 style="
+    text-align:center;
+    font-size:22px;
+    color:#222222;
+    ">
+    🎉 나와 가장 잘 맞는 팬덤은?
+    </h3>
 
 
-
-    st.write("")
-
-
-
-    st.subheader(
-        result["catchphrase"]
-    )
-
-
-    st.write(
-        result["description"]
-    )
+    <h1 style="
+    text-align:center;
+    font-size:38px;
+    color:#222222;
+    ">
+    {result["title"]}
+    </h1>
 
 
-
-    st.divider()
-
-
-
+    </div>
+    """,
+    unsafe_allow_html=True
+)
     st.subheader("✨ 당신의 특징")
 
 
