@@ -5,7 +5,7 @@ questions = [
         "answers": [
             {
                 "text": "아티스트의 성장 과정과 오래된 기록",
-                "type": "FANGOD"
+                "type": "fangod"
             },
             {
                 "text": "새로운 모습과 앞으로의 가능성",
@@ -80,7 +80,7 @@ questions = [
         "answers": [
             {
                 "text": "최애와 관련된 순간을 기록하고 정리한다",
-                "type": "FANGOD"
+                "type": "fangod"
             },
             {
                 "text": "새로운 콘텐츠를 찾아 빠르게 공유한다",
