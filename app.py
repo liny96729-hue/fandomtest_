@@ -323,37 +323,40 @@ else:
 
 
 
-    st.markdown(
+st.markdown(
     f"""
     <div class="card">
 
-    <h3 style="
-    text-align:center;
-    font-size:22px;
-    color:#222222;
-    ">
-    🎉 나와 가장 잘 맞는 팬덤은?
-    </h3>
+        <h3 style="
+            text-align:center;
+            font-size:22px;
+            color:#222222;
+        ">
+            🎉 나와 가장 잘 맞는 팬덤은?
+        </h3>
 
+        <h2 style="
+            text-align:center;
+            font-size:38px;
+            color:#222222;
+            margin-bottom:10px;
+        ">
+            {result["title"]}
+        </h2>
 
-<h2 style="
-    text-align:center;
-    font-size:38px;
-    color:#222222;
-    margin-bottom:10px;
-">
-    {result["title"]}
-</h2>
+        <p style="
+            text-align:center;
+            font-size:18px;
+            color:#666666;
+            line-height:1.6;
+        ">
+            {result["description"]}
+        </p>
 
-<p style="
-    text-align:center;
-    font-size:18px;
-    color:#666666;
-    line-height:1.6;
-">
-    {result["description"]}
-</p>
-
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
     </div>
     """,
