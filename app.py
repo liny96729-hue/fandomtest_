@@ -336,20 +336,23 @@ else:
     </h3>
 
 
-    <h2 style="
+<h2 style="
     text-align:center;
     font-size:38px;
     color:#222222;
+    margin-bottom:10px;
 ">
-    {result["title"]}<br>
-    <span style="
-        font-size:18px;
-        font-weight:normal;
-        color:#666666;
-    ">
-        {result["description"]}
-    </span>
+    {result["title"]}
 </h2>
+
+<p style="
+    text-align:center;
+    font-size:18px;
+    color:#666666;
+    line-height:1.6;
+">
+    {result["description"]}
+</p>
 
 
     </div>
