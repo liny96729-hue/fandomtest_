@@ -358,10 +358,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-    </div>
-    """,
-    unsafe_allow_html=True
-)
     st.subheader("✨ 당신의 특징")
 
 
