@@ -1,6 +1,6 @@
 results = {
 
-    "FANGOD": {
+    "fangod": {
         "title": "fangod",
         "catchphrase": "아티스트와 함께 성장하는 팬",
         "description": "오랜 시간 한결같이 아티스트를 응원하며 성장 과정을 함께하는 팬덤 스타일입니다.",
