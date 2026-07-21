@@ -322,68 +322,55 @@ else:
 
 
 
-st.markdown(
-    f"""
-    <div class="card">
+    st.markdown(
+        f"""
+        <div class="card">
 
-        <div style="
+        <h1 style="
         text-align:center;
-        font-size:22px;
-        font-weight:700;
-        color:#222222;
-        margin-bottom:10px;
+        font-size:24px;
         ">
         🎉 나와 가장 잘 맞는 팬덤은?
-        </div>
+        </h1>
 
 
-        <div style="
-        text-align:center;
-        font-size:38px;
-        font-weight:800;
-        color:#222222;
-        margin-bottom:25px;
-        ">
+        <h1 style="text-align:center;">
         {result["title"]}
+        </h1>
+
+
         </div>
-
-
-        <div style="
-        text-align:center;
-        font-size:26px;
-        font-weight:700;
-        color:#222222;
-        margin-bottom:15px;
-        ">
-        {result["catchphrase"]}
-        </div>
-
-
-        <div style="
-        text-align:center;
-        font-size:17px;
-        line-height:1.7;
-        color:#555555;
-        ">
-        {result["description"]}
-        </div>
-
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-
-st.write("")
+        """,
+        unsafe_allow_html=True
+    )
 
 
 
-st.subheader("✨ 당신의 특징")
+    st.write("")
 
 
-for feature in result["features"]:
 
-    st.info(feature)
+    st.subheader(
+        result["catchphrase"]
+    )
+
+
+    st.write(
+        result["description"]
+    )
+
+
+
+    st.divider()
+
+
+
+    st.subheader("✨ 당신의 특징")
+
+
+    for feature in result["features"]:
+
+        st.info(feature)
 
 
 
@@ -500,4 +487,3 @@ for feature in result["features"]:
             """,
             unsafe_allow_html=True
         )
-
