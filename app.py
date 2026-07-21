@@ -323,7 +323,7 @@ else:
 
 
 
-st.markdown(
+    st.markdown(
     f"""
     <div class="card">
 
@@ -368,9 +368,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.write("")
+    st.write("")
 
-st.divider()
+    st.divider()
 
 
 
