@@ -69,7 +69,7 @@ st.markdown(
     div[data-testid="stRadio"] {
 
         background:white;
-        padding:16px;
+        padding:20px;
         border-radius:20px;
 
     }
@@ -227,7 +227,7 @@ if st.session_state.page < len(questions):
 
 
     choice = st.radio(
-        "가장 비슷한 답변을 선택해주세요",
+        "선택해주세요",
         options,
         index=(
             options.index(previous)
@@ -323,40 +323,45 @@ else:
 
 
 
-st.markdown(
-    f"""
-    <div class="card">
+    st.markdown(
+        f"""
+        <div class="card">
 
-        <h3 style="
-            text-align: center;
-            font-size: 22px;
-            color: #222222;
-        ">
-            🎉 나와 가장 잘 맞는 팬덤은?
-        </h3>
+        <h1 style="text-align:center;">
+        🎉 테스트 완료!
+        </h1>
 
-        <h2 style="
-            text-align: center;
-            font-size: 38px;
-            color: #222222;
-            margin-bottom: 10px;
-        ">
-            {result["title"]}
-        </h2>
 
-        <p style="
-            text-align: center;
-            font-size: 18px;
-            color: #666666;
-            line-height: 1.6;
-        ">
-            {result["description"]}
-        </p>
+        <h1 style="text-align:center;">
+        {result["title"]}
+        </h1>
 
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+
+    st.write("")
+
+
+
+    st.subheader(
+        result["catchphrase"]
+    )
+
+
+    st.write(
+        result["description"]
+    )
+
+
+
+    st.divider()
+
+
 
     st.subheader("✨ 당신의 특징")
 
