@@ -323,7 +323,7 @@ else:
 
 
 
-    st.markdown(
+   st.markdown(
     f"""
     <div class="card">
 
@@ -368,10 +368,9 @@ else:
     unsafe_allow_html=True
 )
 
-    st.write("")
+st.write("")
 
-    st.divider()
-
+st.divider()
 
 
     st.subheader("✨ 당신의 특징")
