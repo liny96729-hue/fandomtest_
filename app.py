@@ -334,7 +334,10 @@ else:
         </h1>
 
 
-        <h1 style="text-align:center;">
+        <h1 style="
+        text-align:center;
+        font-size:36px
+        ">
         {result["title"]}
         </h1>
 
