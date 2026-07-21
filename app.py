@@ -338,12 +338,18 @@ else:
 
     <h2 style="
     text-align:center;
-    font-size:38px;24px:
+    font-size:38px;
     color:#222222;
-    ">
+">
     {result["title"]}<br>
-    {result["description"]}
-    </h2>
+    <span style="
+        font-size:18px;
+        font-weight:normal;
+        color:#666666;
+    ">
+        {result["description"]}
+    </span>
+</h2>
 
 
     </div>
