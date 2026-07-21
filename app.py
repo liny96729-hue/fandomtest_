@@ -227,7 +227,7 @@ if st.session_state.page < len(questions):
 
 
     choice = st.radio(
-        "선택해주세요",
+        "가장 비슷한 답변을 선택해주세요",
         options,
         index=(
             options.index(previous)
