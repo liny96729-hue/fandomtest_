@@ -351,7 +351,7 @@ else:
        
         <h2 style="
        text-align:center;
-       font-size:24px;
+       font-size:20px;
        color:#222222;
        ">
        {result["description"]}
