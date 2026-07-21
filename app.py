@@ -336,13 +336,14 @@ else:
     </h3>
 
 
-    <h1 style="
+    <h2 style="
     text-align:center;
     font-size:38px;
     color:#222222;
     ">
     {result["title"]}
-    </h1>
+    {result["description"]}
+    </h2>
 
 
     </div>
