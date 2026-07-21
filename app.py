@@ -381,9 +381,9 @@ st.write("")
 st.subheader("✨ 당신의 특징")
 
 
-    for feature in result["features"]:
+for feature in result["features"]:
 
-        st.info(feature)
+    st.info(feature)
 
 
 
