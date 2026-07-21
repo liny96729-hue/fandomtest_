@@ -323,42 +323,59 @@ else:
 
 
 
-    st.markdown(
-        f"""
-        <div class="card">
+st.markdown(
+    f"""
+    <div class="card">
 
-        <h1 style="
+        <div style="
         text-align:center;
-        font-size:24px;
+        font-size:22px;
+        font-weight:700;
+        color:#222222;
+        margin-bottom:10px;
         ">
         🎉 나와 가장 잘 맞는 팬덤은?
-        </h1>
-
-
-        <h1 style="text-align:center;">
-        {result["title"]}
-        </h1>
-
-
         </div>
-        """,
-        unsafe_allow_html=True
-    )
 
 
+        <div style="
+        text-align:center;
+        font-size:38px;
+        font-weight:800;
+        color:#222222;
+        margin-bottom:25px;
+        ">
+        {result["title"]}
+        </div>
 
-    st.write("")
+
+        <div style="
+        text-align:center;
+        font-size:26px;
+        font-weight:700;
+        color:#222222;
+        margin-bottom:15px;
+        ">
+        {result["catchphrase"]}
+        </div>
 
 
+        <div style="
+        text-align:center;
+        font-size:17px;
+        line-height:1.7;
+        color:#555555;
+        ">
+        {result["description"]}
+        </div>
 
-    st.subheader(
-        result["catchphrase"]
-    )
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
-    st.write(
-        result["description"]
-    )
+st.write("")
 
 
 
