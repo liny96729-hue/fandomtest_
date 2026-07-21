@@ -322,7 +322,7 @@ else:
 
 
 
-    st.markdown(
+st.markdown(
     f"""
     <div class="card">
 
