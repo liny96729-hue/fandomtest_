@@ -338,6 +338,22 @@ else:
         {result["title"]}
         </h1>
 
+        <h2 style="
+       text-align:center;
+       font-size:30px;
+       color:#222222;
+       ">
+       {result["catchphrase"]}
+       </h2>
+       
+        <h2 style="
+       text-align:center;
+       font-size:38px;
+       color:#222222;
+       ">
+       {result["description"]}
+       </h2>
+
 
         </div>
         """,
@@ -345,23 +361,7 @@ else:
     )
 
 
-
     st.write("")
-
-
-
-    st.subheader(
-        result["catchphrase"]
-    )
-
-
-    st.write(
-        result["description"]
-    )
-
-
-
-    st.divider()
 
 
 
