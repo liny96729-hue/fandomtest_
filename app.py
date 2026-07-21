@@ -341,7 +341,7 @@ else:
     font-size:38px;
     color:#222222;
     ">
-    {result["title"]}
+    {result["title"]}<br>
     {result["description"]}
     </h2>
 
