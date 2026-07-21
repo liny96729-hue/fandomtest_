@@ -227,7 +227,7 @@ if st.session_state.page < len(questions):
 
 
     choice = st.radio(
-        "선택해주세요",
+        "가장 잘 맞는 답을 선택해주세요",
         options,
         index=(
             options.index(previous)
@@ -328,7 +328,7 @@ else:
         <div class="card">
 
         <h1 style="text-align:center;">
-        🎉 테스트 완료!
+        🎉 나와 가장 잘 맞는 팬덤은?
         </h1>
 
 
