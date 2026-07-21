@@ -338,7 +338,7 @@ else:
 
     <h2 style="
     text-align:center;
-    font-size:38px;
+    font-size:38px;24px:
     color:#222222;
     ">
     {result["title"]}<br>
