@@ -69,7 +69,7 @@ st.markdown(
     div[data-testid="stRadio"] {
 
         background:white;
-        padding:20px;
+        padding:16px;
         border-radius:20px;
 
     }
