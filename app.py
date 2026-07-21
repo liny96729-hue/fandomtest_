@@ -282,105 +282,99 @@ if st.session_state.page < len(questions):
 
 else:
 
-
     scores = {}
 
-
-
+    # 각 답변이 어떤 팬덤 타입인지 확인
     for i, answer in enumerate(st.session_state.answers):
-
 
         q = questions[i]
 
-
         for option in q["answers"]:
-
 
             if option["text"] == answer:
 
-
                 fandom = option["type"]
 
-
                 if fandom not in scores:
-
                     scores[fandom] = 0
-
 
                 scores[fandom] += 1
 
 
-
-
+    # 가장 높은 점수의 팬덤 찾기
     result_type = max(
         scores,
         key=scores.get
     )
 
 
-
     result = results[result_type]
 
 
+    # =====================
+    # RESULT CARD
+    # =====================
 
-st.markdown(
-    f"""
-    <div class="card">
+    st.markdown(
+        f"""
+        <div class="card">
 
-        <div style="
-        text-align:center;
-        font-size:22px;
-        font-weight:700;
-        color:#222222;
-        margin-bottom:10px;
-        ">
-        🎉 나와 가장 잘 맞는 팬덤은?
+            <div style="
+            text-align:center;
+            font-size:22px;
+            font-weight:700;
+            color:#222222;
+            margin-bottom:10px;
+            ">
+            🎉 나와 가장 잘 맞는 팬덤은?
+            </div>
+
+
+            <div style="
+            text-align:center;
+            font-size:38px;
+            font-weight:800;
+            color:#222222;
+            margin-bottom:25px;
+            ">
+            {result["title"]}
+            </div>
+
+
+            <div style="
+            text-align:center;
+            font-size:26px;
+            font-weight:700;
+            color:#222222;
+            margin-bottom:15px;
+            ">
+            {result["catchphrase"]}
+            </div>
+
+
+            <div style="
+            text-align:center;
+            font-size:17px;
+            line-height:1.7;
+            color:#555555;
+            ">
+            {result["description"]}
+            </div>
+
         </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 
-        <div style="
-        text-align:center;
-        font-size:38px;
-        font-weight:800;
-        color:#222222;
-        margin-bottom:25px;
-        ">
-        {result["title"]}
-        </div>
+    st.write("")
 
 
-        <div style="
-        text-align:center;
-        font-size:26px;
-        font-weight:700;
-        color:#222222;
-        margin-bottom:15px;
-        ">
-        {result["catchphrase"]}
-        </div>
-
-
-        <div style="
-        text-align:center;
-        font-size:17px;
-        line-height:1.7;
-        color:#555555;
-        ">
-        {result["description"]}
-        </div>
-
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-
-st.write("")
-
-
+    # =====================
+    # FEATURES
+    # =====================
 
     st.divider()
-
 
 
     st.subheader("✨ 당신의 특징")
@@ -391,10 +385,12 @@ st.write("")
         st.info(feature)
 
 
-
     st.divider()
 
 
+    # =====================
+    # STYLE
+    # =====================
 
     st.subheader("💡 추천 덕질 스타일")
 
@@ -404,20 +400,17 @@ st.write("")
     )
 
 
-
     st.divider()
-
 
 
     # =====================
     # BUTTONS
     # =====================
 
-
     col1, col2, col3 = st.columns(3)
 
 
-
+    # 다시 하기
     with col1:
 
         if st.button("🔄 다시 하기"):
@@ -429,9 +422,8 @@ st.write("")
             st.rerun()
 
 
-
+    # 팬덤스테이지
     with col2:
-
 
         st.markdown(
             """
@@ -445,7 +437,7 @@ st.write("")
             height:55px;
             border-radius:30px;
             background:white;
-            color:#222222;
+            color:#222222 !important;
             text-decoration:none;
             font-size:15px;
             font-weight:bold;
@@ -458,12 +450,10 @@ st.write("")
         )
 
 
-
+    # X 공유
     with col3:
 
-
         TEST_URL = "https://fandomstgetest.streamlit.app/"
-
 
 
         share_text = (
@@ -474,12 +464,10 @@ st.write("")
         )
 
 
-
         share_url = (
             "https://twitter.com/intent/tweet?text="
             + urllib.parse.quote(share_text)
         )
-
 
 
         st.markdown(
@@ -494,7 +482,7 @@ st.write("")
             height:55px;
             border-radius:30px;
             background:white;
-            color:#222222;
+            color:#222222 !important;
             text-decoration:none;
             font-size:15px;
             font-weight:bold;
