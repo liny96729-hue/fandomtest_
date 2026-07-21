@@ -329,7 +329,7 @@ else:
 
         <h1 style="
         text-align:center;
-        font-size:15px;
+        font-size:24px;
         ">
         🎉 나와 가장 잘 맞는 팬덤은?
         </h1>
