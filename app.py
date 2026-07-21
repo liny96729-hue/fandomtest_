@@ -327,7 +327,10 @@ else:
         f"""
         <div class="card">
 
-        <h1 style="text-align:center;">
+        <h1 style="
+        text-align:center;
+        font-size:15px;
+        ">
         🎉 나와 가장 잘 맞는 팬덤은?
         </h1>
 
