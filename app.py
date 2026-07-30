@@ -447,7 +447,7 @@ else:
     with col3:
 
 
-        TEST_URL = "https://fandomstgetest.streamlit.app/"
+        TEST_URL = "https://bit.ly/4bk3M1K"
 
 
 
