@@ -462,7 +462,7 @@ else:
 
 
         share_url = (
-            "https://twitter.com/intent/tweet?text="
+            "https://bit.ly/4bk3M1K"
             + urllib.parse.quote(share_text)
         )
 
