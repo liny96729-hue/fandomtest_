@@ -455,7 +455,7 @@ else:
             f"🎤 나의 K-POP 팬덤 찾기 결과!\n\n"
             f"나는 {result['title']} 💖\n\n"
             f"너의 팬덤 유형도 찾아보기 ✨\n"
-            f"{TEST_URL}\n"
+            f"{TEST_URL}\n\n"
             f"#팬덤스테이지 #팬덤테스트"
         )
 
